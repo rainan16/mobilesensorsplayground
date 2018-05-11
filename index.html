@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="raineran16">
+    <script type="text/javascript" src="js/orientation.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <title>Media-Queries and Sensors - raineran16</title>
+</head>
+
+<body onload="runOnLoad();">
+    <header>
+        <h1>Mobile First Sensor Usage</h1>
+    </header>
+    <section id="four_columns">
+        <h2>4 Photo Categories
+        </h2>
+        <article class="img-item">
+            <h3 class="hidden">Cool</h3>
+            <figure>
+                <a href="img/cold.jpg" title="picture 1">
+                    <img src="img/cold-small.jpg" alt="picture 1" />
+                </a>
+                <figcaption>
+                    <strong>Cool</strong>
+                    Collection of fantastic shots! Just relax.
+                </figcaption>
+            </figure>
+        </article>
+        <article class="img-item">
+            <h3 class="hidden">Hot</h3>
+            <figure>
+                <a href="img/hot.jpg" title="picture 2">
+                    <img src="img/hot-small.jpg" alt="picture 2" />
+                </a>
+                <figcaption>
+                    <strong>Hot</strong>
+                    Outstanding hot shots from all over the world. Some of the best photografers show their hot pics.
+                </figcaption>
+            </figure>
+        </article>
+        <article class="img-item">
+            <h3 class="hidden">Old</h3>
+            <figure>
+                <a href="img/old.jpg" title="picture 3">
+                    <img src="img/old-small.jpg" alt="picture 3" />
+                </a>
+                <figcaption>
+                    <strong>Old</strong>
+                    Old but great pictures. Mostly black and white.
+                </figcaption>
+            </figure>
+        </article>
+        <article class="img-item">
+            <h3 class="hidden">New</h3>
+            <figure>
+                <a href="img/new.jpg" title="picture 4">
+                    <img src="img/new-small.jpg" alt="picture 4" />
+                </a>
+                <figcaption>
+                    <strong>New</strong>
+                    Smartphone with filter - no problem within this category.<br \>No restrictions at all.
+                </figcaption>
+            </figure>
+        </article>
+        <br class="clear" />
+    </section>
+    <footer>
+        <div class="debug">
+            <span id="do-unsupported" class="hidden error">Debug.exclamation: deviceorientation event not supported</span>
+            <span id="dm-unsupported" class="hidden error">Debug.exclamation: devicemotion event not supported</span>
+            <span id="na-unsupported" class="hidden error">Debug.exclamation: notification not supported</span>
+            <span id="na-granted" class="hidden">Debug.notification: granted</span>
+            <span id="na-not-granted" class="hidden error">Debug.notification: not granted</span>
+        </div>
+
+        <div class="debug">
+            <div id="debug-co-info" class="hidden">
+                Debug.coordinates.
+                <span id="is-absolute">unavailable</span>: [
+                <span id="beta" class="value">null</span>,
+                <span id="gamma" class="value">null</span>,
+                <span id="alpha" class="value">null</span>]
+            </div>
+            <div id="debug-ac-info" class="hidden">
+                Debug.acceleration: [
+                <span id="acceleration-x" class="value">null</span>,
+                <span id="acceleration-y" class="value">null</span>,
+                <span id="acceleration-z" class="value">null</span>]
+            </div>
+        </div>
+        <div class="debug">
+            <button id="button-vibrate" class="debug" onclick="doVibration();">Debug.vibrate</button>
+            <button id="button-notify" class="debug" onclick="showNotification('This is a debug notification.');">Debug.notify</button>
+            <br/>
+            <span id="v-unsupported" class="hidden error">Debug.exclamation: vibration not supported</span>
+        </div>
+
+        <small class="author">Created by
+            <a href="https://github.com/raineran16">https://github.com/raineran16</a>
+            <p>
+                <a href="https://www.pexels.com/">Pictures from https://www.pexels.com/</a>            
+            </p>
+        </small>
+    </footer>
+</body>
+
+</html>
